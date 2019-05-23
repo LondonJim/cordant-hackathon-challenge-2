@@ -32,6 +32,7 @@ class ManagerFinder {
               .then(function(results) {
                 that.apiResults = JSON.parse(results.response)
                 that.parseRequester()
+                Display.view(that.results)
               });
         })
         .catch(function(e) {
