@@ -4,16 +4,23 @@ class ManagerFinder {
     this.client = client
     this.url = 'https://cordantgroup-helpdesk.freshservice.com/api/v2/requesters'
     this.headers = { headers: { "Authorization": "Basic <%= encode(iparam.data.api_key) %>"}};
-    this.requesterId
-    this.results
+    this.requesterId // client requester id
+    this.results // results from requester api
+    this.requester // api requester data
   }
 
-  findRequester() {
+  parseRequester() {
     let that = this;
     this.results.requesters.forEach(function(requester) {
       if (requester.id === that.requesterId) {
-        console.log("match");
-      } 
+        that.requester = requester
+        console.log({
+          deptId: that.requester.department_ids,
+          costCentre: that.requester.custom_fields.cost_centre,
+          email: that.requester.primary_email,
+          manager: that.requester.reporting_manager_id
+        });
+      }
     })
   }
 
@@ -26,7 +33,7 @@ class ManagerFinder {
             that.client.request.get(that.url, that.headers)
               .then(function(results) {
                 that.results = JSON.parse(results.response)
-                that.findRequester()
+                that.parseRequester()
               });
         })
         .catch(function(e) {
