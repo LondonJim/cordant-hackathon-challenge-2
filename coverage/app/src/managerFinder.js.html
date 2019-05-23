@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">94.44% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>17/18</span>
+        <span class='fraction'>0/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">94.44% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>17/18</span>
+        <span class='fraction'>0/17</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -85,25 +85,22 @@
 40
 41
 42
-43
-44
-45</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+43</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">8×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -114,15 +111,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -133,40 +129,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class ManagerFinder {
 &nbsp;
-  constructor(client) {
-    this.client = client
-    this.url = 'https://cordantgroup-helpdesk.freshservice.com/api/v2/requesters'
-    this.headers = { headers: { "Authorization": "Basic &lt;%= encode(iparam.data.api_key) %&gt;"}};
-    this.requesterId // client requester id
-    this.results // results from requester api
-    this.requester // api requester data
+  constructor<span class="fstat-no" title="function not covered" >(client) {</span>
+<span class="cstat-no" title="statement not covered" >    this.client = client</span>
+<span class="cstat-no" title="statement not covered" >    this.url = 'https://cordantgroup-helpdesk.freshservice.com/api/v2/requesters'</span>
+<span class="cstat-no" title="statement not covered" >    this.headers = { headers: { "Authorization": "Basic &lt;%= encode(iparam.data.api_key) %&gt;"}};</span>
+<span class="cstat-no" title="statement not covered" >    this.requesterId </span>// client requester id
+<span class="cstat-no" title="statement not covered" >    this.apiResults </span>// results from requester api
+<span class="cstat-no" title="statement not covered" >    this.results </span>// stores requester costCentre, brand/dept, email, manager id
   }
 &nbsp;
-  parseRequester() {
-    let that = this;
-    this.results.requesters.forEach(function(requester) {
-      if (requester.id === that.requesterId) {
-        that.requester = requester
-        console.log({
-          deptId: that.requester.department_ids,
-          costCentre: that.requester.custom_fields.cost_centre,
-          email: that.requester.primary_email,
-          manager: that.requester.reporting_manager_id
-        });
+  parseRequester<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    let that = this;</span>
+<span class="cstat-no" title="statement not covered" >    this.apiResults.requesters.forEach(<span class="fstat-no" title="function not covered" >function(requester) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (requester.id === that.requesterId) {</span>
+<span class="cstat-no" title="statement not covered" >         that.results = {</span>
+                          deptId: requester.department_ids,
+                          costCentre: requester.custom_fields.cost_centre,
+                          email: requester.primary_email,
+                          manager: requester.reporting_manager_id
+                        }
       }
     })
   }
 &nbsp;
-  execute() {
-    let that = this
-    this.client.data.get('requester')
-        .then(function(data) {
-            // $('#apptext').text("Ticket created by " + data.requester.name);
-            that.requesterId = data.requester.id;
-            that.client.request.get(that.url, that.headers)
-              .then(function(results) {
-                that.results = JSON.parse(results.response)
-                that.parseRequester()
+  execute<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    let that = this</span>
+<span class="cstat-no" title="statement not covered" >    this.client.data.get('requester')</span>
+        .then(<span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >            that.requesterId = data.requester.id;</span>
+<span class="cstat-no" title="statement not covered" >            that.client.request.get(that.url, that.headers)</span>
+              .then(<span class="fstat-no" title="function not covered" >function(results) {</span>
+<span class="cstat-no" title="statement not covered" >                that.apiResults = JSON.parse(results.response)</span>
+<span class="cstat-no" title="statement not covered" >                that.parseRequester()</span>
               });
         })
         .catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
@@ -181,7 +175,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 23 2019 14:48:45 GMT+0100 (BST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 23 2019 15:00:38 GMT+0100 (BST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

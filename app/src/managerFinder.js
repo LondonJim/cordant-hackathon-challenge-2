@@ -5,21 +5,20 @@ class ManagerFinder {
     this.url = 'https://cordantgroup-helpdesk.freshservice.com/api/v2/requesters'
     this.headers = { headers: { "Authorization": "Basic <%= encode(iparam.data.api_key) %>"}};
     this.requesterId // client requester id
-    this.results // results from requester api
-    this.requester // api requester data
+    this.apiResults // results from requester api
+    this.results // stores requester costCentre, brand/dept, email, manager id
   }
 
   parseRequester() {
     let that = this;
-    this.results.requesters.forEach(function(requester) {
+    this.apiResults.requesters.forEach(function(requester) {
       if (requester.id === that.requesterId) {
-        that.requester = requester
-        console.log({
-          deptId: that.requester.department_ids,
-          costCentre: that.requester.custom_fields.cost_centre,
-          email: that.requester.primary_email,
-          manager: that.requester.reporting_manager_id
-        });
+         that.results = {
+                          deptId: requester.department_ids,
+                          costCentre: requester.custom_fields.cost_centre,
+                          email: requester.primary_email,
+                          manager: requester.reporting_manager_id
+                        }
       }
     })
   }
@@ -28,11 +27,10 @@ class ManagerFinder {
     let that = this
     this.client.data.get('requester')
         .then(function(data) {
-            // $('#apptext').text("Ticket created by " + data.requester.name);
             that.requesterId = data.requester.id;
             that.client.request.get(that.url, that.headers)
               .then(function(results) {
-                that.results = JSON.parse(results.response)
+                that.apiResults = JSON.parse(results.response)
                 that.parseRequester()
               });
         })
