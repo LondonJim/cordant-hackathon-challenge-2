@@ -1,1 +1,6 @@
-{}
+{
+  "data": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2IzNTVmNDVlZTE2YzE5OWI5ZDExM2MiLCJpYXQiOjE1NTUyNTY4MjB9.X_4osEpniIcHM9H8g3Az3AQVuC2YMQ8f41Jcyx7jMbE",
+    "secure": true
+  }
+}

@@ -1,6 +1,6 @@
-function runPasswordFinder(requester) {
+function runPasswordFinder(requester, cl) {
   managerFinder = new ManagerFinder
-  managerFinder.execute(requester)
+  managerFinder.execute(requester, cl)
 }
 
 $(document).ready( function() {
@@ -9,10 +9,11 @@ $(document).ready( function() {
           var client = _client;
           client.events.on('app.activated',
             function() {
+              let cl = client
                 client.data.get('requester')
                     .then(function(data) {
                         $('#apptext').text("Ticket created by " + data.requester.name);
-                        runPasswordFinder(data.requester.id)
+                        runPasswordFinder(data.requester.id, cl)
                     })
                     .catch(function(e) {
                         console.log('Exception - ', e);
