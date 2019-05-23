@@ -3,7 +3,7 @@ class ManagerFinder {
   constructor(client) {
     this.client = client
     this.url = 'https://cordantgroup-helpdesk.freshservice.com/api/v2/requesters'
-    this.headers = { "headers": { "x-auth-token": "<%= data.token %>"}}
+    this.headers = { headers: { "Authorization": "Basic <%= encode(iparam.data.api_key) %>"}}
     this.requester
   }
 
@@ -12,10 +12,14 @@ class ManagerFinder {
     this.client.data.get('requester')
         .then(function(data) {
             $('#apptext').text("Ticket created by " + data.requester.name);
-            let outcome = that.client.request.get(that.url, that.headers)
+            that.client.request.get(that.url, that.headers)
+              .then(function(result) {
+                console.log(result)
+              })
         })
         .catch(function(e) {
             console.log('Exception - ', e);
         });
   }
+
 }
