@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">44.44% </span>
+        <span class="strong">45.45% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/9</span>
+        <span class='fraction'>5/11</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/5</span>
+        <span class='fraction'>2/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">44.44% </span>
+        <span class="strong">45.45% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/9</span>
+        <span class='fraction'>5/11</span>
       </div>
     </div>
   </div>
@@ -65,7 +65,11 @@
 20
 21
 22
-23</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+23</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -76,7 +80,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -84,27 +87,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">runPasswordFinder(requester) {
-  managerFinder = new managerFinder
-  managerFinder.execute(requester)
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="fstat-no" title="function not covered" >function runPasswordFinder(requester) {</span>
+<span class="cstat-no" title="statement not covered" >  managerFinder = new ManagerFinder</span>
+<span class="cstat-no" title="statement not covered" >  managerFinder.execute(requester)</span>
 }
 &nbsp;
 $(document).ready( function() {
-    app.init<span class="fstat-no" title="function not covered" >ialized()</span>
-        .then(fu<span class="cstat-no" title="statement not covered" >nction(_client) {</span>
-          var client = _cl<span class="fstat-no" title="function not covered" >ient;</span>
-          client.events.<span class="cstat-no" title="statement not covered" >on('app.activated',</span>
-            function() {<span class="cstat-no" title="statement not covered" ></span>
-                client.d<span class="cstat-no" title="statement not covered" >ata.get('requester')</span>
-                    .then(function(data) {
-                        $('<span class="fstat-no" title="function not covered" >#apptext').te</span>xt("Ticket created by " + data.requester.name);
-<span class="cstat-no" title="statement not covered" >                        runPasswordFinder(data.requester</span>)
+    app.initialized()
+        .then(function(_client) {
+          var client = _client;
+          client.events.on('app.activated',
+<span class="fstat-no" title="function not covered" >            function() {</span>
+<span class="cstat-no" title="statement not covered" >                client.data.get('requester')</span>
+                    .then(<span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                        $('#apptext').text("Ticket created by " + data.requester.name);</span>
+<span class="cstat-no" title="statement not covered" >                        runPasswordFinder(data.requester.id)</span>
                     })
-                    .catch(function(e) {
-                        console.log('Exception - ', e);
+                    .catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                        console.log('Exception - ', e);</span>
                     });
         });
     });
@@ -115,7 +115,7 @@ $(document).ready( function() {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 23 2019 12:29:27 GMT+0100 (BST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 23 2019 12:42:57 GMT+0100 (BST)
 </div>
 </div>
 <script src="../prettify.js"></script>
