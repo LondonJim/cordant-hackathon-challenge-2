@@ -1,7 +1,8 @@
 class ManagerFinder {
 
-  constructor(client) {
+  constructor(client, changePassword = new ChangePassword) {
     this.client = client
+    this.changePassword = changePassword
     this.url = 'https://cordantgroup-helpdesk.freshservice.com/api/v2/requesters'
     this.headers = { headers: { "Authorization": "Basic <%= encode(iparam.data.api_key) %>"}};
     this.requesterId // client requester id
@@ -33,6 +34,7 @@ class ManagerFinder {
                 that.apiResults = JSON.parse(results.response)
                 that.parseRequester()
                 Display.view(that.results)
+                that.changePassword.listenerOn()
               });
         })
         .catch(function(e) {
