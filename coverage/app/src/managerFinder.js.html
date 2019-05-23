@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">87.5% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>14/16</span>
+        <span class='fraction'>0/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">87.5% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>14/16</span>
+        <span class='fraction'>0/16</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -83,32 +83,32 @@
 38</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,33 +119,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class ManagerFinder {
 &nbsp;
-  constructor(client) {
-    this.client = client
-    this.url = 'https://cordantgroup-helpdesk.freshservice.com/api/v2/requesters'
-    this.headers = { headers: { "Authorization": "Basic &lt;%= encode(iparam.data.api_key) %&gt;"}};
-    this.requesterId
-    this.results
+  constructor<span class="fstat-no" title="function not covered" >(client) {</span>
+<span class="cstat-no" title="statement not covered" >    this.client = client</span>
+<span class="cstat-no" title="statement not covered" >    this.url = 'https://cordantgroup-helpdesk.freshservice.com/api/v2/requesters'</span>
+<span class="cstat-no" title="statement not covered" >    this.headers = { headers: { "Authorization": "Basic &lt;%= encode(iparam.data.api_key) %&gt;"}};</span>
+<span class="cstat-no" title="statement not covered" >    this.requesterId</span>
+<span class="cstat-no" title="statement not covered" >    this.results</span>
   }
 &nbsp;
-  findRequester() {
-    let that = this;
-    this.results.requesters.forEach(function(requester) {
-      <span class="missing-if-branch" title="if path not taken" >I</span>if (requester.id === that.requesterId) {
-<span class="cstat-no" title="statement not covered" >        console.log(requester);</span>
-      }
+  findRequester<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    let that = this;</span>
+<span class="cstat-no" title="statement not covered" >    this.results.requesters.forEach(<span class="fstat-no" title="function not covered" >function(requester) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (requester.id === that.requesterId) {</span>
+<span class="cstat-no" title="statement not covered" >        console.log("match");</span>
+      } 
     })
   }
 &nbsp;
-  execute() {
-    let that = this
-    this.client.data.get('requester')
-        .then(function(data) {
+  execute<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    let that = this</span>
+<span class="cstat-no" title="statement not covered" >    this.client.data.get('requester')</span>
+        .then(<span class="fstat-no" title="function not covered" >function(data) {</span>
             // $('#apptext').text("Ticket created by " + data.requester.name);
-            that.requesterId = data.requester.id;
-            that.client.request.get(that.url, that.headers)
-              .then(function(results) {
-                that.results = JSON.parse(results.response)
-                that.findRequester()
+<span class="cstat-no" title="statement not covered" >            that.requesterId = data.requester.id;</span>
+<span class="cstat-no" title="statement not covered" >            that.client.request.get(that.url, that.headers)</span>
+              .then(<span class="fstat-no" title="function not covered" >function(results) {</span>
+<span class="cstat-no" title="statement not covered" >                that.results = JSON.parse(results.response)</span>
+<span class="cstat-no" title="statement not covered" >                that.findRequester()</span>
               });
         })
         .catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
@@ -160,7 +160,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 23 2019 14:34:31 GMT+0100 (BST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 23 2019 14:37:33 GMT+0100 (BST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

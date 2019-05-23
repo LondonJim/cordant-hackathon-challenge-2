@@ -12,8 +12,8 @@ class ManagerFinder {
     let that = this;
     this.results.requesters.forEach(function(requester) {
       if (requester.id === that.requesterId) {
-        console.log(requester);
-      }
+        console.log("match");
+      } 
     })
   }
 
